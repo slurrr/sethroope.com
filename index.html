@@ -14,9 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
     <style>
         body {
-            background: url('./images/sitebackground2.png') no-repeat center top fixed;
+            background: url('./images/sitebackground.PNG') no-repeat center top fixed;
             background-size: cover;
-            padding-top: 150px; /* Adjust this value to push the content below the header */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -31,10 +30,16 @@
             transform: translateY(0);
         }
         header {
-            background: linear-gradient(45deg, #FFA500, #FFD700);
+            background: linear-gradient(60deg, #FFA500, #FFD700);
         }
         footer {
             margin-top: auto;
+        }
+        #portfolio {
+            padding-top: 100vh;
+        }
+        #about {
+            padding-top: 50vh;
         }
     </style>
 </head>
@@ -45,14 +50,14 @@
         <p class="text-lg mt-2">Builder | Tinkerer | Enthusiast</p>
     </header>
 
-    <section id="about" class="max-w-3xl mx-auto p-6 fade-in">
-        <h2 class="text-3xl font-semibold">About Me</h2>
-        <p class="mt-2">Hey there, I'm Seth—a true Montana boy through and through. Born and raised in the heart of Big Sky Country, I've always felt most alive exploring the great outdoors, chasing adventure, and spending time with my incredible family (shoutout to my endlessly patient wife, Megan, and our two wild, wonderful kiddos!).</p>
-    </section>
-
     <section id="portfolio" class="max-w-3xl mx-auto p-6 fade-in">
         <h2 class="text-3xl font-semibold">Portfolio</h2>
         <div id="projects" class="grid gap-4 mt-4"></div>
+    </section>
+
+    <section id="about" class="max-w-3xl mx-auto p-6 fade-in">
+        <h2 class="text-3xl font-semibold">About Me</h2>
+        <p class="mt-2">Hey there, I'm Seth—a true Montana boy through and through. Born and raised in the heart of Big Sky Country, I've always felt most alive exploring the great outdoors, chasing adventure, and spending time with my incredible family (shoutout to my endlessly patient wife, Megan, and our two wild, wonderful kiddos!).</p>
     </section>
 
     <footer class="text-center p-6 bg-gray-100 dark:bg-gray-800 w-full">
@@ -90,4 +95,3 @@
     </script>
 </body>
 </html>
-
