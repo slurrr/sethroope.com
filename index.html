@@ -14,9 +14,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
     <style>
         body {
-            background: url('./images/sitebackground.PNG') no-repeat center top fixed;
+            background: url('./images/sitebackground2.PNG') no-repeat center top fixed;
             background-size: cover;
             padding-top: 150px; /* Adjust this value to push the content below the header */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .fade-in {
             opacity: 0;
@@ -27,11 +30,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+        header {
+            background: linear-gradient(45deg, #FFA500, #FFD700);
+        }
+        footer {
+            margin-top: auto;
+        }
     </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
     
-    <header class="text-center p-10 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-b-2xl shadow-lg fixed top-0 left-0 w-full z-50">
+    <header class="text-center p-10 text-white rounded-b-2xl shadow-lg fixed top-0 left-0 w-full z-50">
         <h1 class="text-5xl font-extrabold">Seth Roope</h1>
         <p class="text-lg mt-2">Builder | Tinkerer | Enthusiast</p>
     </header>
@@ -46,13 +55,13 @@
         <div id="projects" class="grid gap-4 mt-4"></div>
     </section>
 
-    <footer class="text-center p-6 bg-gray-100 dark:bg-gray-800 mt-10">
+    <footer class="text-center p-6 bg-gray-100 dark:bg-gray-800 w-full">
         <div class="flex justify-center space-x-6">
-            <a href="mailto:sethroope@example.com" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-blue-500"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/slurrr" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-blue-500"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-blue-500"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-blue-500"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sethroope@example.com" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-orange-500"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/slurrr" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-orange-500"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-orange-500"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-orange-500"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 text-2xl hover:text-orange-500"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
@@ -81,3 +90,4 @@
     </script>
 </body>
 </html>
+
