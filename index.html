@@ -1,73 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121903382-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-121903382-1');
-  </script>
-  <meta charset="utf-8">
-  <title>Seth Roope's Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/styles.css"> 
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
-  <body>
-
-    <div class="main-nav">
-        <ul class="nav">
-          <li class="name">Seth Roope</li>
-          <li><a href="tokenAnalytics.html">Tokens</a></li>
-          <!--
-          <li><a href="#">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="photos.html">Photos</a></li>
-          <li><a href="#">Contact</a></li>
-          -->
-        </ul>
-    </div>
-
-    <header>
-      <img src="images/profileStache.jpg" alt="Profile photograph of Seth with a sweet mustache" class="profile-image">
-      <h1 class="tag name">Hello, I’m Seth.</h1>
-      <p class="tag location">My home is Helena, Montana.</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    
+    <header class="text-center p-10">
+        <h1 class="text-4xl font-bold">Your Name</h1>
+        <p class="text-lg">Web Developer | Designer | Tech Enthusiast</p>
     </header>
 
-    <main class="flex">
-      <div class="card">
-        <h2>Background</h2>
-        <p>Vastly interested and infinitely curious</p>
-        <p></p>
-        <ul>
-          <li>To learn more, <a href="resume.html">Projects</a></li>
-        </ul>
-      </div> 
+    <section id="about" class="max-w-3xl mx-auto p-6">
+        <h2 class="text-2xl font-semibold">About Me</h2>
+        <p class="mt-2">Brief intro about yourself, your skills, and your background.</p>
+    </section>
 
-      <div class="card">
-        <h2>Likes</h2>
-        <p>I think best in python. I can hack in anything. If I were to build something from scratch I would use python, javascript (with or without any frameworks), swift and anything result specific to accomplishing the goal.</p>
-        <ul class="skills">
-          <li>Python</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Swift</li>
-          <li>Node</li>
-        </ul>
-        <p></p>
-      </div> 
+    <section id="portfolio" class="max-w-3xl mx-auto p-6">
+        <h2 class="text-2xl font-semibold">Portfolio</h2>
+        <div id="projects" class="grid gap-4 mt-4"></div>
+    </section>
 
-    </main>
-    <footer>
-      <ul>
-        <li><a href="#" class="social twitter">Twitter</a></li>
-        <li><a href="#" class="social linkedin">LinkedIn</a></li>
-        <li><a href="#" class="social github">Github</a></li>
-      </ul>
-      <p class="copyright">Copyright 2020, Seth Roope</p>
-    </footer>
-  </body>
-  </html>
+    <section id="contact" class="max-w-3xl mx-auto p-6">
+        <h2 class="text-2xl font-semibold">Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>GitHub: <a href="https://github.com/yourusername" class="text-blue-500">yourusername</a></p>
+    </section>
+
+    <script>
+        const projects = [
+            { name: "Project One", link: "https://github.com/yourusername/project-one" },
+            { name: "Project Two", link: "https://github.com/yourusername/project-two" }
+        ];
+
+        const projectContainer = document.getElementById("projects");
+        projects.forEach(project => {
+            let projectElement = document.createElement("div");
+            projectElement.innerHTML = `<a href="${project.link}" class="block p-4 border rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">${project.name}</a>`;
+            projectContainer.appendChild(projectElement);
+        });
+    </script>
+</body>
+</html>
