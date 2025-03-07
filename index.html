@@ -31,18 +31,18 @@
             transform: translateY(0);
         }
         header {
-            background: linear-gradient(60deg, #FFA500, #FFD700);
+            background: linear-gradient(60deg, #b0760a, #FFD700);
             height: 20vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            text-align: top;
             position: relative;
             z-index: 10;
         }
         .section {
-            min-height: 33vh;
+            min-height: 50vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,13 +50,18 @@
             transition: opacity 1s ease-in-out;
         }
         #portfolio {
-            margin-top: 80vh;
+            margin-top: 100vh; /* Ensures consistent spacing below header */
         }
         #about {
-            margin-top: 5vh;
+            margin-top: 0vh; /* Ensures consistent spacing below portfolio */
+        }
+        @media (max-width: 768px) {
+            #portfolio, #about {
+                margin-top: 10vh; /* Adjusts spacing for smaller screens */
+            }
         }
         footer {
-            margin-top: 10vh;
+            margin-top: auto;
         }
     </style>
 </head>
@@ -113,7 +118,7 @@
         document.addEventListener("scroll", () => {
             document.querySelectorAll(".section").forEach(section => {
                 const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.75) {
+                if (rect.top < window.innerHeight * 0.5) {
                     section.style.opacity = "1";
                 }
             });
