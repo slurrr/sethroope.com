@@ -14,8 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
     <style>
         body {
-            background: url('images/sitebackground.PNG') no-repeat center center fixed;
+            background: url('./images/sitebackground.PNG') no-repeat center top fixed;
             background-size: cover;
+            padding-top: 150px; /* Adjust this value to push the content below the header */
         }
         .fade-in {
             opacity: 0;
@@ -30,7 +31,7 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
     
-    <header class="text-center p-10 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-b-2xl shadow-lg">
+    <header class="text-center p-10 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-b-2xl shadow-lg fixed top-0 left-0 w-full z-50">
         <h1 class="text-5xl font-extrabold">Seth Roope</h1>
         <p class="text-lg mt-2">Builder | Tinkerer | Enthusiast</p>
     </header>
