@@ -14,16 +14,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
     <style>
         body {
-            background: url('./images/sitebackground.PNG') no-repeat center top fixed;
+            background: url('./images/sitebackground.PNG') no-repeat center center;
             background-size: cover;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
         .fade-in.visible {
             opacity: 1;
@@ -31,33 +32,47 @@
         }
         header {
             background: linear-gradient(60deg, #FFA500, #FFD700);
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
         footer {
             margin-top: auto;
-        }
-        #portfolio {
-            padding-top: 100vh;
-        }
-        #about {
-            padding-top: 50vh;
         }
     </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
     
-    <header class="text-center p-10 text-white rounded-b-2xl shadow-lg fixed top-0 left-0 w-full z-50">
+    <header class="text-white rounded-b-2xl shadow-lg w-full">
         <h1 class="text-5xl font-extrabold">Seth Roope</h1>
         <p class="text-lg mt-2">Builder | Tinkerer | Enthusiast</p>
     </header>
 
-    <section id="portfolio" class="max-w-3xl mx-auto p-6 fade-in">
-        <h2 class="text-3xl font-semibold">Portfolio</h2>
-        <div id="projects" class="grid gap-4 mt-4"></div>
+    <section id="portfolio" class="section fade-in">
+        <div class="max-w-3xl mx-auto p-6">
+            <h2 class="text-3xl font-semibold">Portfolio</h2>
+            <div id="projects" class="grid gap-4 mt-4"></div>
+        </div>
     </section>
 
-    <section id="about" class="max-w-3xl mx-auto p-6 fade-in">
-        <h2 class="text-3xl font-semibold">About Me</h2>
-        <p class="mt-2">Hey there, I'm Seth—a true Montana boy through and through. Born and raised in the heart of Big Sky Country, I've always felt most alive exploring the great outdoors, chasing adventure, and spending time with my incredible family (shoutout to my endlessly patient wife, Megan, and our two wild, wonderful kiddos!).</p>
+    <section id="about" class="section fade-in">
+        <div class="max-w-3xl mx-auto p-6">
+            <h2 class="text-3xl font-semibold">About Me</h2>
+            <p class="mt-2">Hey there, I'm Seth—a true Montana boy through and through. Born and raised in the heart of Big Sky Country, I've always felt most alive exploring the great outdoors, chasing adventure, and spending time with my incredible family (shoutout to my endlessly patient wife, Megan, and our two wild, wonderful kiddos!).</p>
+        </div>
     </section>
 
     <footer class="text-center p-6 bg-gray-100 dark:bg-gray-800 w-full">
@@ -83,13 +98,13 @@
             projectContainer.appendChild(projectElement);
         });
 
-        // Fade-in animation effect
-        document.addEventListener("DOMContentLoaded", () => {
-            const elements = document.querySelectorAll(".fade-in");
-            elements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.classList.add("visible");
-                }, index * 200);
+        // Scroll-based section reveal animation
+        document.addEventListener("scroll", () => {
+            document.querySelectorAll(".section").forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75) {
+                    section.style.opacity = "1";
+                }
             });
         });
     </script>
